@@ -1,1 +1,31 @@
-
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define endl "\n"
+int main()
+{
+	ll t;
+	cin>>t;
+	while(t--)
+	{
+		ll x,y;
+		cin>>y>>x;
+		ll mx=max(x,y);
+		ll mx1=(mx-1)*(mx-1);
+		ll ans=0;
+		if(mx%2)
+		{
+			if(y==mx) ans=mx1+x;
+			else ans=mx1+(2*mx)-y;
+			
+		}
+		else
+		{
+			if(x==mx) ans=mx1+y;
+			else ans=mx1+(2*mx)-x;
+		}
+		cout<<ans<<endl;
+	}
+	
+	return 0;
+}
